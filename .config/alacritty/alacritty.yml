@@ -1,0 +1,109 @@
+live_config_reload: true
+
+env:
+  TERM: xterm-256color
+
+import:
+  # - ~/.config/alacritty/themes/catppuccin.yml
+  - ~/.config/alacritty/themes/gruvbox_dark.yaml
+
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+  save_to_clipboard: true
+
+window:
+  opacity: 1.00
+  dimensions:
+      columns: 130
+      lines: 34
+
+  padding:
+    x: 3
+    y: 3
+
+  dynamic_padding: false
+  # Window decorations
+  #
+  # Values for `decorations`:
+  #     - full: Borders and title bar
+  #     - none: Neither borders nor title bar
+  #
+  # Values for `decorations` (macOS only):
+  #     - transparent: Title bar, transparent background and title bar buttons
+  #     - buttonless: Title bar, transparent background and no title bar buttons
+  decorations: full
+
+font:
+  normal:
+    family: 'JetBrainsMono NF'
+    # family: 'UbuntuMono NF'
+    style: Regular
+
+  size: 16.0
+  use_thin_strokes: true
+
+draw_bold_text_with_bright_colors: true
+
+scrolling:
+  # maximum number of lines in the scrollback buffer. Specifying '0' will
+  # disable scrolling.
+  history: 10000
+
+  # Number of lines the viewport will move for every line scrolled when
+  # scrollback is enabled (history > 0).
+  multiplier: 3
+
+mouse:
+  hide_when_typing: true
+
+key_bindings:
+  # Read more for special mac Keybindings
+  # https://github.com/alacritty/alacritty/wiki/Keyboard-mappings#german-de_de
+  # General Quality of Life Improvements
+  - { key: Space, mods: Alt, chars: " " }
+  - { key: Back, mods: Super, chars: "\x15" } # delete word/line
+  - { key: Left, mods: Alt, chars: "\x1bb" } # one word left
+  - { key: Right, mods: Alt, chars: "\x1bf" } # one word right
+  - { key: Left, mods: Command, chars: "\x1bOH", mode: AppCursor } # Home
+  - { key: Right, mods: Command, chars: "\x1bOF", mode: AppCursor } # End
+
+  # Scrolling
+  - { key: PageUp,   mods: Shift,   action: ScrollPageUp   }
+  - { key: PageDown, mods: Shift,   action: ScrollPageDown }
+  - { key: End,      mods: Shift,   action: ScrollToBottom }
+  - { key: Home,     mods: Shift,   action: ScrollToTop    }
+
+  # German (de_DE)
+  - { key: 28, mods: Alt, chars: "{" }
+  - { key: 25, mods: Alt, chars: "}" }
+  - { key: 37, mods: Alt, chars: "@" }
+  - { key: 26, mods: Alt|Shift, chars: "\\" }
+  - { key: 26, mods: Alt, chars: "|" }
+  # - { key: 45, mods: Alt, chars: "~" }
+  - { key: 23, mods: Alt, chars: "[" }
+  - { key: 22, mods: Alt, chars: "]" }
+
+  # Cmd + Enter ToggleFullscreen
+  - { key: 36, mods: Command, action: ToggleFullscreen }
+
+  # Tmux specific keys "\x02" is code for <C-b>
+  - { key: B, mods: Command, chars: "\x02" }
+  # Map C-b to C-a like screen
+  - { key: A, mods: Command, chars: "\x02" }
+  - { key: Key1, mods: Command, chars: "\x021" }
+  - { key: Key2, mods: Command, chars: "\x022" }
+  - { key: Key3, mods: Command, chars: "\x023" }
+  - { key: Key4, mods: Command, chars: "\x024" }
+  - { key: Key5, mods: Command, chars: "\x025" }
+  - { key: Key6, mods: Command, chars: "\x026" }
+  - { key: Key7, mods: Command, chars: "\x027" }
+  - { key: Key8, mods: Command, chars: "\x028" }
+  - { key: Key9, mods: Command, chars: "\x029" }
+  - { key: Comma, mods: Command, chars: "\x02," }
+  - { key: E, mods: Command|Shift, chars: "\x02%" }
+  - { key: E, mods: Command, chars: "\x02\"" }
+  - { key: T, mods: Command, chars: "\x02c" }
+  - { key: N, mods: Command, chars: "\x02n" }
+  - { key: P, mods: Command, chars: "\x02p" }
+  - { key: W, mods: Command, chars: ":w\n" }
+  - { key: J, mods: Command, chars: "\x02\x54" }
