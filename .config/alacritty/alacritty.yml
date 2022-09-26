@@ -66,7 +66,7 @@ key_bindings:
   - { key: Right, mods: Alt, chars: "\x1bf" } # one word right
   - { key: Left, mods: Command, chars: "\x1bOH", mode: AppCursor } # Home
   - { key: Right, mods: Command, chars: "\x1bOF", mode: AppCursor } # End
-
+  - { key: N,        mods: Command,       action: SpawnNewInstance             }
   # Scrolling
   - { key: PageUp,   mods: Shift,   action: ScrollPageUp   }
   - { key: PageDown, mods: Shift,   action: ScrollPageDown }
@@ -103,7 +103,7 @@ key_bindings:
   - { key: E, mods: Command|Shift, chars: "\x02%" }
   - { key: E, mods: Command, chars: "\x02\"" }
   - { key: T, mods: Command, chars: "\x02c" }
-  - { key: N, mods: Command, chars: "\x02n" }
-  - { key: P, mods: Command, chars: "\x02p" }
-  - { key: W, mods: Command, chars: ":w\n" }
+  # - { key: N, mods: Command, chars: "\x02n" }
+  # - { key: P, mods: Command, chars: "\x02p" }
+  # - { key: W, mods: Command, chars: ":w\n" }
   - { key: J, mods: Command, chars: "\x02\x54" }
