@@ -9,6 +9,7 @@ export PYENV_DIR="$HOME/.pyenv/shims"
 export VM_DEV="$HOME/Virtual Machines.localized/dev.vmwarevm/dev.vmx"
 export MYVIMRC="$HOME/.config/nvim/init.lua"
 export EDITOR="nvim"
+export TERM="screen-256color"
 
 # ---- path ----
 
